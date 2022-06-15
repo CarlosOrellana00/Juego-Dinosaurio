@@ -28,6 +28,7 @@ body{
   background: url('imagen/dino.png') repeat-x 0px 0px;
   background-size: 336px 84px;
   background-position: 0px;
+  z-index: 10;
 }
 
 .dino-corriendo{
@@ -69,14 +70,11 @@ body{
 .nube{
   width: 92px;
   height: 26px;
-
   position: absolute;
   z-index: 0;
-
   background: url(imagen/nube.png) no-repeat;
   background-size: 92px 26px;
 }
-
 
 .score{
   width: 100px;
@@ -90,6 +88,17 @@ body{
   font-size: 30px;
   font-weight: bold;
   text-align: right;
+}
+
+.game-over{
+  display: none;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: yellow;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
 }
 
 @keyframes animarDino{
