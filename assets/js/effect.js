@@ -69,6 +69,7 @@ function Start() {
 
 function Update() {
     if(parado) return;
+
     MoverDinosaurio();
     MoverSuelo();
     DecidirCrearObstaculos();
@@ -87,7 +88,6 @@ function HandleKeyDown(ev){
 }
 
 function Saltar(){
-
     if(dinoPosY === sueloY){
         saltando = true;
         velY = impulso;
@@ -209,15 +209,8 @@ function GanarPuntos() {
 
 function GameOver() {
     Estrellarse();
-    perder();
     gameOver.style.display = "block";
 }
-
-//prueba
-function perder(){
-  console.log("fin del juego, muestra de prueba");
-}
-
 
 function DetectarColision() {
     for (var i = 0; i < obstaculos.length; i++) {
@@ -243,5 +236,3 @@ function IsCollision(a, b, paddingTop, paddingRight, paddingBottom, paddingLeft)
         (aRect.left + paddingLeft > (bRect.left + bRect.width))
     );
 }
-
-
